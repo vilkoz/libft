@@ -6,7 +6,7 @@
 /*   By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/02 16:54:22 by vrybalko          #+#    #+#             */
-/*   Updated: 2017/01/31 16:40:25 by vrybalko         ###   ########.fr       */
+/*   Updated: 2017/02/20 23:58:03 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <sys/uio.h>
 # include <unistd.h>
 # include <stdlib.h>
-# define BUFF_SIZE 20
+# define BUFF_SIZE 64
 
 typedef struct		s_buf
 {

@@ -6,7 +6,7 @@
 /*   By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/15 15:32:05 by vrybalko          #+#    #+#             */
-/*   Updated: 2017/01/31 16:29:11 by vrybalko         ###   ########.fr       */
+/*   Updated: 2017/02/28 00:09:36 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,7 +143,6 @@ int		get_next_line(const int fd, char **line)
 		return (-1);
 	if (is_sec != 0)
 		return (1);
-	ft_bzero(*line, ft_strlen(*line));
 	ft_buf_new(0, 0, head, &lst);
 	return (0);
 }

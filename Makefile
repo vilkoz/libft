@@ -6,13 +6,13 @@
 #    By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/23 14:08:11 by vrybalko          #+#    #+#              #
-#    Updated: 2017/01/31 16:40:53 by vrybalko         ###   ########.fr        #
+#    Updated: 2017/02/18 22:53:31 by vrybalko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -g
 
 SRCS = ft_memset.c			\
 	   ft_bzero.c			\

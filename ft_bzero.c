@@ -6,7 +6,7 @@
 /*   By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 16:37:27 by vrybalko          #+#    #+#             */
-/*   Updated: 2016/11/30 21:05:41 by vrybalko         ###   ########.fr       */
+/*   Updated: 2017/02/27 23:58:18 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_bzero(void *s, size_t n)
 {
 	char	*tmp;
 
-	if (s == NULL)
+	if (s == NULL || n == 0)
 		return ;
 	tmp = s;
 	while (n--)
