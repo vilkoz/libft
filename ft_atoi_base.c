@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vrybalko <vrybalko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/04 15:44:07 by vrybalko          #+#    #+#             */
-/*   Updated: 2017/02/04 15:44:11 by vrybalko         ###   ########.fr       */
+/*   Updated: 2017/03/23 19:39:48 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	ft_inbase(char c, int base, char ba)
 {
@@ -39,7 +41,7 @@ int			ft_atoi_base(char *str, int base)
 	char	ba;
 
 	value = 0;
-	if (base < 2 || base > 16)
+	if (base < 2 || base > 16 || str == NULL)
 		return (0);
 	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\f'
 			|| *str == '\r' || *str == '\v')
