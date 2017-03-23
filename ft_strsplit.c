@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vrybalko <vrybalko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 19:20:36 by vrybalko          #+#    #+#             */
-/*   Updated: 2016/11/30 21:02:34 by vrybalko         ###   ########.fr       */
+/*   Updated: 2017/03/24 00:16:38 by tor              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char			**ft_strsplit(char const *s, char c)
 		return (0);
 	i = 0;
 	j = 0;
-	if ((out = (char **)malloc(sizeof(char *) * count_words(s, c) + 1)) == 0)
+	if ((out = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1))) == 0)
 		return (0);
 	while (s[i])
 	{
@@ -83,6 +83,6 @@ char			**ft_strsplit(char const *s, char c)
 		else
 			i++;
 	}
-	out[j] = 0;
+	out[j] = NULL;
 	return (out);
 }
