@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vrybalko <vrybalko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/02 16:54:22 by vrybalko          #+#    #+#             */
-/*   Updated: 2017/02/20 23:58:03 by vrybalko         ###   ########.fr       */
+/*   Updated: 2017/04/23 23:57:53 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,6 @@ int					ft_strlenchr(char const *s, char c, int i);
 void				ft_print_array(char **arr);
 int					get_next_line(const int fd, char **line);
 int					ft_atoi_base(char *str, int base);
+double				ft_atod(const char *s);
 
 #endif

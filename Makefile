@@ -6,7 +6,7 @@
 #    By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/23 14:08:11 by vrybalko          #+#    #+#              #
-#    Updated: 2017/02/18 22:53:31 by vrybalko         ###   ########.fr        #
+#    Updated: 2017/04/23 23:58:32 by tor              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,8 @@ SRCS = ft_memset.c			\
 	   ft_strlenchr.c		\
 	   ft_print_array.c		\
 	   get_next_line.c		\
-	   ft_atoi_base.c
+	   ft_atoi_base.c		\
+	   ft_atod.c
 
 BINS = $(SRCS:.c=.o)
 
