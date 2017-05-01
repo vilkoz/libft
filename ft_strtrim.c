@@ -6,7 +6,7 @@
 /*   By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 17:59:05 by vrybalko          #+#    #+#             */
-/*   Updated: 2016/12/01 20:29:11 by vrybalko         ###   ########.fr       */
+/*   Updated: 2017/05/01 16:13:56 by tor              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-static	int		drop_spaces(char const *s)
+static int		drop_spaces(char const *s)
 {
 	int		i;
 
@@ -24,7 +24,7 @@ static	int		drop_spaces(char const *s)
 	return (i);
 }
 
-static	int		drop_rev_spaces(char const *s, int i)
+static int		drop_rev_spaces(char const *s, int i)
 {
 	while ((s[i] >= 9 && s[i] <= 13) || s[i] == 32)
 		i--;

@@ -6,7 +6,7 @@
 /*   By: vrybalko <vrybalko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/23 23:46:52 by vrybalko          #+#    #+#             */
-/*   Updated: 2017/05/01 15:41:12 by tor              ###   ########.fr       */
+/*   Updated: 2017/05/01 16:17:51 by tor              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,26 @@ static double	ft_pow(double x, int c)
 	return (res);
 }
 
+static char		*drop_num(const char *s)
+{
+	int		i;
+
+	i = -1;
+	while (ft_isdigit(s[i++]) || s[i] == '-' || s[i] == '+')
+		;
+	return ((char*)&s[i]);
+}
+
+static char		*drop_spaces(char const *s)
+{
+	int		i;
+
+	i = 0;
+	while ((s[i] >= 9 && s[i] <= 13) || s[i] == 32)
+		i++;
+	return ((char *)&s[i]);
+}
+
 double			ft_atod(const char *s)
 {
 	int		a;
@@ -47,12 +67,9 @@ double			ft_atod(const char *s)
 	char	*dot;
 
 	if ((a = ft_atoi(s)) == 0 &&
-			(minus = ft_strchr(s, '-')))
+			(minus = ft_strtrim(s)) && minus[0] == '-')
 		is_neg = 1;
-	dot = ft_strchr(s, '.');
-	if (minus && dot && minus > dot)
-		is_neg = 0;
-	if (dot)
+	if ((dot = ft_strchr(s, '.')) && dot == drop_num(drop_spaces(s)) + 1)
 	{
 		b = ft_atoi(ft_strchr(s, '.') + 1);
 		return (((double)a + (a < 0 ? -1 : 1) * ((double)b /
