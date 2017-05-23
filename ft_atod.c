@@ -6,7 +6,7 @@
 /*   By: vrybalko <vrybalko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/23 23:46:52 by vrybalko          #+#    #+#             */
-/*   Updated: 2017/05/23 17:34:51 by vrybalko         ###   ########.fr       */
+/*   Updated: 2017/05/23 23:41:36 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ double			ft_atod(const char *s)
 	char	*minus;
 	char	*dot;
 
+	is_neg = 0;
 	if ((a = ft_atoi(s)) == 0 &&
 		(minus = ft_strtrim(s)) && minus[0] == '-')
 		is_neg = 1;
