@@ -103,5 +103,6 @@ void				ft_print_array(char **arr);
 int					get_next_line(const int fd, char **line);
 int					ft_atoi_base(char *str, int base);
 double				ft_atod(const char *s);
+void				*ft_realloc(void *buf, size_t old_size, size_t size);
 
 #endif

@@ -80,7 +80,8 @@ SRCS = ft_memset.c			\
 	   ft_print_array.c		\
 	   get_next_line.c		\
 	   ft_atoi_base.c		\
-	   ft_atod.c
+	   ft_atod.c			\
+	   ft_realloc.c
 
 BINS = $(SRCS:.c=.o)
 
