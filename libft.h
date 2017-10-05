@@ -6,7 +6,7 @@
 /*   By: vrybalko <vrybalko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/02 16:54:22 by vrybalko          #+#    #+#             */
-/*   Updated: 2017/04/23 23:57:53 by vrybalko         ###   ########.fr       */
+/*   Updated: 2017/10/05 14:43:57 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,8 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lst_push_back(t_list *begin, t_list *elem);
 t_list				*ft_list_at(t_list *begin_list, unsigned int nbr);
+size_t				ft_lst_size(t_list *head);
+void				**ft_lst_to_array(t_list *head);
 int					ft_count_words(char const *s, char c);
 int					ft_strlenchr(char const *s, char c, int i);
 void				ft_print_array(char **arr);
