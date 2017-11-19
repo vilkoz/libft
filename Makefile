@@ -6,88 +6,92 @@
 #    By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/23 14:08:11 by vrybalko          #+#    #+#              #
-#    Updated: 2017/11/19 15:16:22 by vrybalko         ###   ########.fr        #
+#    Updated: 2017/11/19 15:38:35 by vrybalko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-FLAGS = -Wall -Wextra -Werror -g
+VPATH = src
 
-SRCS = ft_memset.c			\
-	   ft_bzero.c			\
-	   ft_memcpy.c			\
-	   ft_memccpy.c			\
-	   ft_memmove.c			\
-	   ft_memchr.c			\
-	   ft_memchr.c			\
-	   ft_memcmp.c			\
-	   ft_strlen.c			\
-	   ft_strdup.c			\
-	   ft_strcpy.c			\
-	   ft_strncpy.c			\
-	   ft_strcat.c			\
-	   ft_strncat.c			\
-	   ft_strlcat.c			\
-	   ft_strchr.c			\
-	   ft_strrchr.c			\
-	   ft_strstr.c			\
-	   ft_strnstr.c			\
-	   ft_strcmp.c			\
-	   ft_strncmp.c			\
-	   ft_atoi.c			\
-	   ft_isalpha.c			\
-	   ft_isdigit.c			\
-	   ft_isalnum.c			\
-	   ft_isascii.c			\
-	   ft_isprint.c			\
-	   ft_toupper.c			\
-	   ft_tolower.c			\
-	   ft_memalloc.c		\
-	   ft_memdel.c			\
-	   ft_strnew.c			\
-	   ft_strdel.c			\
-	   ft_strclr.c			\
-	   ft_striter.c			\
-	   ft_striteri.c		\
-	   ft_strmap.c			\
-	   ft_strmapi.c			\
-	   ft_strequ.c			\
-	   ft_strnequ.c			\
-	   ft_strsub.c			\
-	   ft_strjoin.c			\
-	   ft_strtrim.c			\
-	   ft_strsplit.c		\
-	   ft_itoa.c			\
-	   ft_putchar.c			\
-	   ft_putstr.c			\
-	   ft_putendl.c			\
-	   ft_putnbr.c			\
-	   ft_putchar_fd.c		\
-	   ft_putstr_fd.c		\
-	   ft_putendl_fd.c		\
-	   ft_putnbr_fd.c		\
-	   ft_lstnew.c			\
-	   ft_lstdelone.c		\
-	   ft_lstdel.c			\
-	   ft_lstadd.c			\
-	   ft_lstiter.c			\
-	   ft_lstmap.c			\
-	   ft_lst_at.c			\
-	   ft_lst_push_back.c	\
-	   ft_lst_size.c		\
-	   ft_lst_to_array.c	\
-	   ft_count_words.c		\
-	   ft_strlenchr.c		\
-	   ft_print_array.c		\
-	   get_next_line.c		\
-	   ft_atoi_base.c		\
-	   ft_atod.c			\
-	   ft_realloc.c			\
-	   ft_strsplit_quote.c	\
-	   queue.c
+FLAGS = -Wall -Wextra -Werror -I include/ -g
 
-BINS = $(SRCS:.c=.o)
+SRCS = memory/ft_memset.c						\
+	   memory/ft_bzero.c						\
+	   memory/ft_memcpy.c						\
+	   memory/ft_memccpy.c						\
+	   memory/ft_memmove.c						\
+	   memory/ft_memchr.c						\
+	   memory/ft_memchr.c						\
+	   memory/ft_memcmp.c						\
+	   memory/ft_memalloc.c						\
+	   memory/ft_memdel.c						\
+	   memory/ft_realloc.c						\
+	   string/ft_strlen.c						\
+	   string/ft_strdup.c						\
+	   string/ft_strcpy.c						\
+	   string/ft_strncpy.c						\
+	   string/ft_strcat.c						\
+	   string/ft_strncat.c						\
+	   string/ft_strlcat.c						\
+	   string/ft_strchr.c						\
+	   string/ft_strrchr.c						\
+	   string/ft_strstr.c						\
+	   string/ft_strnstr.c						\
+	   string/ft_strcmp.c						\
+	   string/ft_strncmp.c						\
+	   string/ft_atoi.c							\
+	   string/ft_isalpha.c						\
+	   string/ft_isdigit.c						\
+	   string/ft_isalnum.c						\
+	   string/ft_isascii.c						\
+	   string/ft_isprint.c						\
+	   string/ft_toupper.c						\
+	   string/ft_tolower.c						\
+	   string/ft_strnew.c						\
+	   string/ft_strdel.c						\
+	   string/ft_strclr.c						\
+	   string/ft_striter.c						\
+	   string/ft_striteri.c						\
+	   string/ft_strmap.c						\
+	   string/ft_strmapi.c						\
+	   string/ft_strequ.c						\
+	   string/ft_strnequ.c						\
+	   string/ft_strsub.c						\
+	   string/ft_strjoin.c						\
+	   string/ft_strtrim.c						\
+	   string/ft_strsplit.c						\
+	   string/ft_itoa.c							\
+	   string/ft_count_words.c					\
+	   string/ft_strlenchr.c					\
+	   string/ft_strsplit_quote.c				\
+	   string/ft_atoi_base.c					\
+	   string/ft_atod.c							\
+	   print/ft_putchar.c						\
+	   print/ft_putstr.c						\
+	   print/ft_putendl.c						\
+	   print/ft_putnbr.c						\
+	   print/ft_putchar_fd.c					\
+	   print/ft_putstr_fd.c						\
+	   print/ft_putendl_fd.c					\
+	   print/ft_putnbr_fd.c						\
+	   print/ft_print_array.c					\
+	   list/ft_lstnew.c							\
+	   list/ft_lstdelone.c						\
+	   list/ft_lstdel.c							\
+	   list/ft_lstadd.c							\
+	   list/ft_lstiter.c						\
+	   list/ft_lstmap.c							\
+	   list/ft_lst_at.c							\
+	   list/ft_lst_push_back.c					\
+	   list/ft_lst_size.c						\
+	   list/ft_lst_to_array.c					\
+	   get_next_line/get_next_line.c			\
+	   queue/queue.c
+
+BIN_DIR = bin/
+
+BINS = $(addprefix $(BIN_DIR), $(SRCS:.c=.o))
 
 TEST = main.c
 
@@ -99,7 +103,8 @@ $(NAME): $(BINS)
 	ar rc $(NAME) $(BINS)
 	ranlib $(NAME)
 
-%.o: %.c
+$(BIN_DIR)%.o: %.c
+	@mkdir -p $(shell dirname $@)
 	gcc $(FLAGS) -c -o $@ $<
 
 clean:
