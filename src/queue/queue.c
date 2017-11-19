@@ -6,7 +6,7 @@
 /*   By: vrybalko <vrybalko@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 14:41:24 by vrybalko          #+#    #+#             */
-/*   Updated: 2017/11/19 15:02:04 by vrybalko         ###   ########.fr       */
+/*   Updated: 2017/11/19 18:05:19 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,7 @@ void			*queue_pop(t_queue *q)
 	void		*item;
 
 	if (q->count == 0)
-	{
-		ft_putendl_fd("WARNING, NO ITEMS LEFT IN QUEUE, NOTHING TO POP\n", 2);
 		return (NULL);
-	}
 	item = ft_memalloc(q->sz);
 	ft_memcpy(item, q->tail, q->sz);
 	q->tail = (char*)q->tail + q->sz;
