@@ -6,7 +6,7 @@
 #    By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/23 14:08:11 by vrybalko          #+#    #+#              #
-#    Updated: 2017/11/21 14:50:14 by vitaliir         ###   ########.fr        #
+#    Updated: 2017/11/21 15:19:24 by vitaliir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,7 @@ SRCS = memory/ft_memset.c						\
 	   string/ft_itoa.c							\
 	   string/ft_count_words.c					\
 	   string/ft_strlenchr.c					\
+	   string/ft_strlen_chr.c					\
 	   string/ft_strsplit_quote.c				\
 	   string/ft_strsplit_arr_quote.c			\
 	   string/ft_atoi_base.c					\

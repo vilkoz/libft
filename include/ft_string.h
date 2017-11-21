@@ -6,7 +6,7 @@
 /*   By: vrybalko <vrybalko@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 15:11:00 by vrybalko          #+#    #+#             */
-/*   Updated: 2017/11/21 14:50:00 by vitaliir         ###   ########.fr       */
+/*   Updated: 2017/11/21 15:19:03 by vitaliir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 int					ft_count_words(char const *s, char c);
 int					ft_strlenchr(char const *s, char c, int i);
+size_t				ft_strlen_chr(char const *s, char const *c);
 char				**ft_strsplit(char const *s, char c);
 char				**ft_strsplit_quote(char const *s, char c);
 char				**ft_strsplit_arr_quote(char const *s, char const *c);
