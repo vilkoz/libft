@@ -6,34 +6,27 @@
 /*   By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 21:53:06 by vrybalko          #+#    #+#             */
-/*   Updated: 2016/11/29 18:33:01 by vrybalko         ###   ########.fr       */
+/*   Updated: 2017/11/23 00:11:53 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(const char *str, const char *to_find)
-{
-	int i;
-	int j;
+#include "libft.h"
 
-	i = 0;
-	j = 0;
-	if (!to_find[0])
-		return ((char *)str);
-	while (str[i] != '\0')
+char	*ft_strstr(char *s, char *to_find)
+{
+	int		i;
+	size_t	len;
+	
+	i = -1;
+	len = ft_strlen(to_find);
+	if (!s || !to_find)
+		return (0);
+	if (len == 0)
+		return ((char*)s);
+	while (s[++i])
 	{
-		while (str[i] == to_find[j])
-		{
-			i++;
-			j++;
-			if (to_find[j] == '\0')
-				return ((char *)(str + i - j));
-			if (str[i] != to_find[j])
-			{
-				i = i - j + 1;
-				j = 0;
-			}
-		}
-		i++;
+		if (!ft_strncmp(s + i, to_find, len))
+			return ((char*)s + i);
 	}
 	return (0);
 }
