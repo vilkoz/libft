@@ -6,7 +6,7 @@
 #    By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/23 14:08:11 by vrybalko          #+#    #+#              #
-#    Updated: 2018/03/20 15:08:49 by vrybalko         ###   ########.fr        #
+#    Updated: 2018/03/24 17:20:31 by vrybalko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,6 +92,7 @@ SRCS = memory/ft_memset.c						\
 	   get_next_line/get_next_line.c			\
 	   queue/queue.c							\
 	   vector/vector_new.c						\
+	   vector/vector_delete.c					\
 	   vector/vector_add.c						\
 	   vector/vector_get.c						\
 	   vector/vector_set.c						\
