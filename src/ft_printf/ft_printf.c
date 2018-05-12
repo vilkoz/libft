@@ -6,7 +6,7 @@
 /*   By: vrybalko <vrybalko@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/11 21:51:50 by vrybalko          #+#    #+#             */
-/*   Updated: 2018/05/12 15:45:46 by vrybalko         ###   ########.fr       */
+/*   Updated: 2018/05/13 00:02:59 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ t_list			*parse_format_string(const char *format_string)
 	s = (char*)format_string;
 	while (s[0] && (s = ft_strchr(s, '%')))
 	{
-		printf("s: %s\n\n\n", s);
+		printf("\n\n\ns: %s\n", s);
 		s = s + 1;
 		if (!s[0])
 			continue ;
