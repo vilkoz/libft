@@ -6,7 +6,7 @@
 /*   By: vrybalko <vrybalko@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 14:02:01 by vrybalko          #+#    #+#             */
-/*   Updated: 2018/05/12 14:29:00 by vrybalko         ###   ########.fr       */
+/*   Updated: 2018/05/12 14:53:39 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,7 @@
 
 void					fill_flags(char *s, int len, t_format *format);
 void					fill_width(char *s, int len, t_format *format);
+void					fill_precision(char *s, int len, t_format *format);
+void					fill_conversion(char *s, int len, t_format *format);
 
 #endif

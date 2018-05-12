@@ -6,7 +6,7 @@
 /*   By: vrybalko <vrybalko@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 14:01:22 by vrybalko          #+#    #+#             */
-/*   Updated: 2018/05/12 14:30:16 by vrybalko         ###   ########.fr       */
+/*   Updated: 2018/05/12 15:01:28 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,9 @@ void					fill_flags(char *s, int len, t_format *format)
 		}
 		// vrybalko TODO: ERROR NO SUCH FLAG
 		if (j == FLAGS_NUM)
+		{
 			break ;
+		}
 	}
 }
 
@@ -90,4 +92,42 @@ void					fill_precision(char *s, int len, t_format *format)
 	str = ft_strsub(s, 0, len);
 	format->precision = ft_atoi(str);
 	ft_strdel(&str);
+}
+
+static char				*g_conversions = "%sSpdDioOuUxXcC";
+
+static t_va_type		g_conversion_types[] = {
+	ARG_percent_symbol,
+	ARG_s,
+	ARG_S,
+	ARG_p,
+	ARG_d,
+	ARG_D,
+	ARG_i,
+	ARG_o,
+	ARG_O,
+	ARG_u,
+	ARG_U,
+	ARG_x,
+	ARG_X,
+	ARG_c,
+	ARG_C
+};
+
+void					fill_conversion(char *s, int len, t_format *format)
+{
+	int			i;
+
+	(void)len;
+	i = 0;
+	while (g_conversions[i] && g_conversions[i] != s[0])
+	{
+		i++;
+	}
+	if (i == (sizeof(g_conversion_types) / sizeof(g_conversion_types[0])))
+	{
+		// vrybalko TODO: error management
+		return ;
+	}
+	format->type = g_conversion_types[i];
 }

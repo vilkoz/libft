@@ -6,7 +6,7 @@
 #    By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/23 14:08:11 by vrybalko          #+#    #+#              #
-#    Updated: 2018/05/11 22:05:38 by vrybalko         ###   ########.fr        #
+#    Updated: 2018/05/12 15:31:15 by vrybalko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,7 +97,9 @@ SRCS = memory/ft_memset.c						\
 	   vector/vector_add.c						\
 	   vector/vector_get.c						\
 	   vector/vector_set.c						\
-	   ft_printf/ft_printf.c
+	   ft_printf/ft_printf.c					\
+	   ft_printf/fill_format_struct.c			\
+	   ft_printf/fill_format_callbacks.c		\
 
 BIN_DIR = bin/
 

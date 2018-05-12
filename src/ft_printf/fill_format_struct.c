@@ -6,7 +6,7 @@
 /*   By: vrybalko <vrybalko@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 09:48:56 by vrybalko          #+#    #+#             */
-/*   Updated: 2018/05/12 14:34:32 by vrybalko         ###   ########.fr       */
+/*   Updated: 2018/05/12 15:06:10 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,9 @@ static void				(*g_fill_functions[])(char *, int len, t_format *) = {
 	fill_flags,
 	fill_width,
 	NULL,
+	fill_precision,
+	fill_conversion,
+	NULL
 };
 
 void					fill_format_struct(char *s, t_format *format)
@@ -72,8 +75,9 @@ void					fill_format_struct(char *s, t_format *format)
 			{
 				g_fill_functions[state](s + i, j - i, format);
 			}
-			state = g_next_state[state];
 			i = j - 1;
 		}
+		state = g_next_state[state];
 	}
+	format->string = ft_strsub(s, 0, i);
 }
