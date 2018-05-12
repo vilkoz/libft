@@ -6,7 +6,7 @@
 /*   By: vrybalko <vrybalko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/02 16:54:22 by vrybalko          #+#    #+#             */
-/*   Updated: 2018/03/20 15:09:25 by vrybalko         ###   ########.fr       */
+/*   Updated: 2018/05/11 22:09:14 by vrybalko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@
 # include "get_next_line.h"
 # include "queue.h"
 # include "vector.h"
+# include "ft_printf.h"
 
 #endif

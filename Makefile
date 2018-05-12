@@ -6,11 +6,11 @@
 #    By: vrybalko <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/23 14:08:11 by vrybalko          #+#    #+#              #
-#    Updated: 2018/03/31 23:39:06 by vrybalko         ###   ########.fr        #
+#    Updated: 2018/05/11 22:05:38 by vrybalko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME = libftprintf.a
 
 VPATH = src
 
@@ -97,14 +97,11 @@ SRCS = memory/ft_memset.c						\
 	   vector/vector_add.c						\
 	   vector/vector_get.c						\
 	   vector/vector_set.c						\
+	   ft_printf/ft_printf.c
 
 BIN_DIR = bin/
 
 BINS = $(addprefix $(BIN_DIR), $(SRCS:.c=.o))
-
-TEST = main.c
-
-TEST_BINS = $(TEST:.c=.o)
 
 all: $(NAME)
 
@@ -118,17 +115,12 @@ $(BIN_DIR)%.o: %.c
 
 clean:
 	/bin/rm -f $(BINS)
-	/bin/rm -f $(TEST_BINS)
 
 fclean: clean
-	/bin/rm -f $(NAME)_test
 	/bin/rm -f $(NAME)
 
 re: fclean all
 
 f: all
-	@date
-	@echo "\033[38;5;93mLINKING:\033[0m"
-	gcc -o $(NAME)_test $(TEST) $(NAME)
-	@echo "\033[38;5;93mRUNNING:\033[0m"
-	./$(NAME)_test
+	make -C src/ft_printf/test/
+	./src/ft_printf/test/libftprintf_test
