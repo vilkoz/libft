@@ -22,5 +22,8 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_print_array(char **arr);
+void				ft_puthex(unsigned long long n);
+void				ft_puthex_fill(unsigned long long n, char fill_char,
+						unsigned int width);
 
 #endif

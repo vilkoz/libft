@@ -79,6 +79,7 @@ SRCS = memory/ft_memset.c						\
 	   print/ft_putendl_fd.c					\
 	   print/ft_putnbr_fd.c						\
 	   print/ft_print_array.c					\
+	   print/ft_puthex.c						\
 	   list/ft_lstnew.c							\
 	   list/ft_lstdelone.c						\
 	   list/ft_lstdel.c							\
